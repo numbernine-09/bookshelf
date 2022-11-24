@@ -261,7 +261,7 @@ h1 {
   width: fit-content;
   padding: 1em;
   margin: auto;
-  margin-top: 15em;
+  margin-top: 10em;
 }
 
 #buku-dihapus span {
@@ -357,6 +357,14 @@ footer {
   #ya,
   #tidak {
     font-size: 0.8rem;
+  }
+
+  #buku-dihapus {
+    font-size: 1rem;
+  }
+
+  #buku-dihapus span {
+    font-size: 2rem;
   }
 
   #back-to-top {
