@@ -1,0 +1,366 @@
+/* Base start */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 40;
+  font-size: 3rem;
+}
+
+.sembunyikan {
+  display: none;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+/* layout start */
+header {
+  top: 0;
+  overflow: auto;
+  position: sticky;
+  flex-wrap: wrap;
+  z-index: 4;
+}
+
+.container {
+  width: 95%;
+  margin-inline: auto;
+}
+
+img {
+  width: 50px;
+  height: fit-content;
+  margin: 0.25em;
+}
+
+h1 {
+  margin: 8px 20px 8px 20px;
+  color: white;
+  font-size: 3rem;
+}
+
+/* nav */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #264653;
+}
+
+.header .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* input start */
+#input-section {
+  text-align: center;
+  align-items: center;
+  width: 50%;
+  margin: 1em auto;
+}
+
+#input-section p,
+#input-section h2 {
+  font-size: 2.3rem;
+  margin: 20px;
+}
+
+#input-buku {
+  border: #264653 3px solid;
+  border-radius: 20px;
+}
+
+#input-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em;
+}
+
+#input-button button {
+  background-color: #264653;
+  color: white;
+  margin: 0.5em 1em;
+  padding: 0.5em 1em;
+  border-radius: 1000px;
+  border-width: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 300ms ease;
+}
+
+#input-button button:hover {
+  background-color: #305f71;
+  transition: all 300ms ease;
+}
+
+.input {
+  margin: 1em;
+}
+
+.input input {
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #264653;
+  background-color: transparent;
+  outline: none;
+  width: 90%;
+  height: 2em;
+  padding-left: 1em;
+  font-size: 2rem;
+}
+
+.input label {
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+/* input end */
+
+/* rak buku start */
+#rak-buku-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
+
+.rak-buku {
+  margin: 1em;
+  font-size: 2rem;
+}
+
+.rak-buku h2 {
+  margin: 1em;
+  text-align: center;
+}
+
+.rak-buku button {
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms ease;
+  padding: 10px;
+}
+
+.tandaiSelesaiDibaca:hover {
+  color: lime;
+}
+
+.tandaiBelumDibaca:hover {
+  color: yellow;
+}
+
+.hapus:hover {
+  color: red;
+}
+
+.daftarBuku {
+  border: #264653 3px solid;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+.isi {
+  background-color: #264653;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 0.5em;
+  color: white;
+  display: block;
+}
+
+.isi h3 {
+  margin: 0;
+}
+
+.buttons {
+  text-align: right;
+}
+/* rak buku end */
+
+#container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#delete-dialog {
+  background-color: #264653;
+  color: white;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #264653;
+  border-width: 3px;
+  text-align: center;
+  width: fit-content;
+  font-size: 2rem;
+  padding: 2em;
+  margin: auto;
+  margin-top: 10em;
+  z-index: 5;
+}
+
+#ya {
+  border: none;
+  background-color: #cac1b0;
+  border-radius: 10px;
+  margin-right: 5px;
+  padding: 1em;
+  color: white;
+  width: 5em;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+#ya,
+#tidak {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+#tidak {
+  border: none;
+  background-color: #cac1b0;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding: 1em;
+  color: white;
+  width: 5em;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+#ya:hover {
+  background-color: lime;
+}
+
+#tidak:hover {
+  background-color: red;
+}
+
+#buku-dihapus {
+  background-color: #264653;
+  color: white;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #264653;
+  border-width: 3px;
+  text-align: center;
+  font-size: 2.3rem;
+  width: fit-content;
+  padding: 1em;
+  margin: auto;
+  margin-top: 15em;
+}
+
+#buku-dihapus span {
+  font-size: 5rem;
+  margin-top: 20px;
+  color: lime;
+}
+
+/* Delete dialog design end */
+
+/* Button back to top design start */
+#back-to-top {
+  text-align: center;
+  border-radius: 9999px;
+  bottom: 1rem;
+  position: fixed;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  z-index: 9999;
+  right: 1em;
+  background-color: #264653;
+  color: white;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+#back-to-top:hover {
+  background-color: #907970;
+}
+
+#back-to-top span {
+  padding-top: 0.1em;
+}
+
+/* Button back to top design end */
+
+/* Footer design start */
+footer {
+  padding: 1em;
+  text-align: center;
+}
+
+/* Footer design end */
+
+@media screen and (max-width: 665px) {
+  header {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  #input-section {
+    width: auto;
+    margin: 1em;
+  }
+
+  #menu {
+    width: 100%;
+  }
+
+  #input-section p,
+  #input-section h2 {
+    font-size: 1rem;
+  }
+
+  .input input {
+    font-size: 1rem;
+  }
+
+  .input label {
+    font-size: 1rem;
+  }
+
+  #input-button button {
+    font-size: 0.8rem;
+  }
+
+  .rak-buku {
+    font-size: 1rem;
+  }
+  .material-symbols-outlined {
+    font-size: 1rem;
+  }
+
+  #delete-dialog {
+    font-size: 1rem;
+    margin-top: 20em;
+  }
+
+  #ya,
+  #tidak {
+    font-size: 0.8rem;
+  }
+
+  #back-to-top {
+    width: 40px;
+    height: 40px;
+  }
+}

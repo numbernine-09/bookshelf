@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShelf</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <!-- header nav -->
+        <div class="container">
+          <div class="box">
+            <img src="/assets/img/bookshelf.png" alt="" />
+            <h1>bookshelf by rangga</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="">
+      <!-- Input buku start -->
+      <section id="input-section">
+        <h2>Masukkan buku baru</h2>
+        <form id="input-buku">
+          <div class="input">
+            <label for="inputJudul">Judul</label>
+            <br />
+            <input type="text" id="inputJudul" class="light-input" required />
+          </div>
+          <div class="input">
+            <label for="inputPenulis">Penulis</label>
+            <br />
+            <input type="text" id="inputPenulis" class="light-input" required />
+          </div>
+          <div class="input">
+            <label for="inputTahun">Tahun</label>
+            <br />
+            <input type="number" id="inputTahun" class="light-input" required />
+          </div>
+          <p><strong>Masukkan ke</strong></p>
+          <div id="input-button">
+            <button id="submitBelumSelesaiDibaca">
+              <strong>Belum selesai dibaca</strong>
+            </button>
+            <button id="submitSelesaiDibaca">
+              <strong>Selesai dibaca</strong>
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- input buku end -->
+
+      <!-- Rak buku start -->
+      <section id="rak-buku-section">
+        <!-- Rak buku belum selesai dibaca -->
+        <div class="rak-buku">
+          <h2>Belum selesai dibaca</h2>
+          <div id="daftarBukuBelumSelesaiDibaca" class="daftarBuku"></div>
+        </div>
+
+        <!-- Rak buku sudah selesai dibaca -->
+        <div class="rak-buku">
+          <h2>Selesai dibaca</h2>
+          <div id="daftarBukuSelesaiDibaca" class="daftarBuku"></div>
+        </div>
+      </section>
+      <!-- Rak buku end -->
+    </main>
+
+    <a id="back-to-top" class="sembunyikan">
+      <span class="material-symbols-outlined"> arrow_upward </span>
+    </a>
+
+    <div id="container" class="sembunyikan">
+      <div id="delete-dialog" class="sembunyikan">
+        <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+        <button id="ya"><b>Ya</b></button>
+        <button id="tidak"><b>Tidak</b></button>
+      </div>
+
+      <div id="buku-dihapus" class="sembunyikan">
+        <p>Buku berhasil di dihapus</p>
+        <span class="material-symbols-outlined"> check_circle </span>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+    <script src="./script/backTop.js"></script>
+  </body>
+</html>
